@@ -1,0 +1,301 @@
+@use "_reset.scss";
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	background-image: url("../../dist/img/home/background-home-mobile.jpg");
+	background-size: cover;
+	min-height: 100vh;
+	color: #fff;
+	font-size: 1rem;
+	font-family: "Roboto", sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.burger {
+	position: fixed;
+	right: 5%;
+	top: 5%;
+	background: none;
+	border: none;
+	padding: 1em;
+	cursor: pointer;
+	z-index: 100;
+}
+
+nav {
+	padding: 3em;
+
+	.mobile-nav {
+		display: flex;
+		justify-content: space-between;
+
+		.mobile-menu {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: fixed;
+			top: 0;
+			left: 110%;
+			min-height: 100vh;
+			width: 100vw;
+			background-color: rgba(0, 0, 0, 0.95);
+			transition: left 0.2s;
+			overflow: auto;
+
+			&--active {
+				left: 0;
+			}
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+
+				li {
+					padding: 2em;
+					font-size: 2rem;
+					text-transform: uppercase;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.desktop-nav {
+		display: none;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 1.4rem;
+
+		.links {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: rgba(122, 122, 122, 0.1);
+			padding: 1em;
+			width: 75%;
+			ul {
+				display: flex;
+
+				.desktop-link {
+					text-transform: uppercase;
+					font-weight: 300;
+					letter-spacing: 2px;
+
+					.number {
+						display: none;
+					}
+
+					a {
+						display: block;
+						padding: 2em;
+						transition: background-color 0.3s;
+					}
+					a:hover {
+						background-color: rgba(122, 122, 122, 0.2);
+					}
+				}
+			}
+		}
+	}
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2em;
+	font-size: 1.5rem;
+
+	.main-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0 1em;
+		text-align: center;
+
+		h3 {
+			text-transform: uppercase;
+			font-weight: 300;
+		}
+
+		h1 {
+			padding: 0.5em;
+			font-family: serif;
+			font-size: 5rem;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-family: "Quattrocento", serif;
+			font-weight: 400;
+		}
+	}
+
+	.explore {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 200px;
+		height: 200px;
+		margin-top: 2em;
+		background-color: #fff;
+		color: #333;
+		border-radius: 50%;
+		font-size: 2.5rem;
+		font-family: serif;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s;
+	}
+
+	.explore:hover {
+		background-color: rgba(0, 0, 0, 0.95);
+		color: #fff;
+	}
+}
+
+@media (min-width: 768px) {
+	body {
+		background-image: url("../../dist/img/home/background-home-tablet.jpg");
+	}
+
+	nav {
+		.mobile-nav {
+			display: none;
+		}
+
+		.desktop-nav {
+			display: flex;
+		}
+	}
+	main {
+		margin-top: 4em;
+		font-size: 2rem;
+
+		.main-text {
+			padding: 1em 2em;
+
+			h1 {
+				font-size: 10rem;
+			}
+		}
+
+		.explore {
+			margin-top: 5em;
+			width: 300px;
+			height: 300px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	body {
+		background-image: url("../../dist/img/home/background-home-desktop.jpg");
+	}
+
+	nav .desktop-nav .links {
+		width: 60%;
+		background-color: rgba(49, 49, 79, 0.6);
+	}
+
+	main {
+		flex-direction: row;
+		justify-content: space-around;
+
+		.main-text {
+			width: 50%;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	nav .desktop-nav {
+		.links {
+			position: relative;
+			display: flex;
+			justify-content: center;
+
+			ul {
+				.desktop-link {
+					.number {
+						display: inline-block;
+						font-weight: 700;
+					}
+
+					a {
+						padding: 2em;
+					}
+				}
+			}
+		}
+
+		.links::before {
+			position: absolute;
+			top: 50%;
+			left: -52%;
+			width: 55%;
+			height: 2px;
+			background-color: rgba(60, 60, 60, 0.6);
+			content: "";
+		}
+	}
+	main {
+		margin-top: 7em;
+
+		.main-text {
+			align-items: start;
+			text-align: left;
+			width: 40%;
+
+			h1 {
+				padding: 0.3em 0em;
+				font-size: 12rem;
+				font-family: "Quattrocento";
+			}
+
+			p {
+				color: rgba(250, 250, 250, 0.8);
+			}
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	nav .desktop-nav .links {
+        width: 56%;
+		ul .desktop-link a {
+			padding: 2em;
+		}
+	}
+	main .main-text {
+		padding: 3em 6em;
+		width: 40%;
+
+		h1 {
+			font-size: 15rem;
+		}
+	}
+}
