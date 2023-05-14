@@ -1,9 +1,132 @@
-@use 'style.scss';
+@use "style.scss";
 
 body {
-    background-image: url('../../dist/img/crew/background-crew-mobile.jpg');
+	background-image: url("../../dist/img/crew/background-crew-mobile.jpg");
 }
 
 main {
-    display: grid;
+	display: grid;
+	grid-template-columns: 90%;
+	grid-template-rows: 65% 15% 10% 20% 40%;
+	margin-top: 1em;
+	text-align: center;
+
+	img {
+        grid-row: 1/2;
+		width: 65%;
+		margin: 0 auto;
+	}
+
+	.people {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+        grid-row: 2/3;
+		width: 70%;
+		margin: 0 auto;
+
+		.person {
+			height: 10px;
+			width: 10px;
+			padding: 0.5em;
+			border-radius: 50%;
+			background-color: rgba(120, 120, 120, 0.6);
+			cursor: pointer;
+
+			&--active {
+				background-color: #fff;
+			}
+		}
+	}
+
+	.job-title {
+        grid-row: 3/4;
+		color: rgba(255, 255, 255, 0.7);
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
+	.full-name {
+        grid-row: 4/5;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-size: 2.3rem;
+		font-family: "Quattrocento";
+	}
+
+	.person-desc {
+        grid-row: 5/6;
+		line-height: 25px;
+		color: rgba(255, 255, 255, 0.7);
+        padding-bottom: 1em;
+	}
+}
+
+@media (min-width: 576px) {
+	main {
+        grid-template-rows: 70% 25% 10% 15% 20%;
+		img {
+			width: 50%;
+		}
+
+        .full-name {
+            font-size: 3.5rem;
+        }
+	}
+}
+
+@media (min-width: 768px) {
+    body {
+        background-image: url('../../dist/img/crew/background-crew-tablet.jpg');
+    }
+    main {
+        margin-top: 3em;
+        grid-template-rows: 10% 25% 20% 20% 65%;
+
+        img {
+            grid-row: 5/6;
+            width: 52%;
+        }
+
+        .job-title {
+            grid-row: 1/2;
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+        }
+
+        .full-name {
+            grid-row: 2/3;
+            font-size: 5rem;
+            letter-spacing: 4px;
+        }
+
+        .person-desc {
+            grid-row: 3/4;
+            font-size: 2.5rem;
+            line-height: 30px;
+        }
+
+        .people {
+            grid-row: 4/5;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        grid-template-rows: 10% 20% 20% 20% 65%;
+        img {
+            width: 45%;
+        }
+
+        .person-desc {
+            padding-bottom: 2em;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        grid-template-rows: 10% 20% 20% 20% 65%;
+    }
 }
