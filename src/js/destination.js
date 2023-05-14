@@ -44,8 +44,31 @@ const titan = {
     time : '7 years'
 }
 
+const changeElements = (planet) => {
+    planetImg.setAttribute('src', planet.imgPath)
+    planetName.textContent = planet.name;
+    planetDesc.textContent = planet.desc;
+    travelDist.textContent = planet.distance;
+    travelTime.textContent = planet.time;
+}
+
 planets.forEach(function(item) {
     item.addEventListener('click', e => {
-        console.log(e.target);
+        planets.forEach(function(item) {
+            let line = item.querySelector('.planet-line')
+            line.classList.remove('planet-line--active')
+        })
+        let line = e.target.querySelector('.planet-line')
+        line.classList.add('planet-line--active')
+
+        if (e.target.classList.contains('planet-moon')) {
+            changeElements(moon)  
+        } else if (e.target.classList.contains('planet-mars')) {
+            changeElements(mars)
+        } else if (e.target.classList.contains('planet-europa')) {
+            changeElements(europa)
+        } else if (e.target.classList.contains('planet-titan')) {
+            changeElements(titan)
+        }
     })
 })

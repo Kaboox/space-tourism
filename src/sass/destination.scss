@@ -34,10 +34,24 @@ main {
         text-transform: uppercase;
         color: rgba(255,255,255,.7);
 
-		li {
+		.planet {
+            position: relative;
 			padding: 1em;
             cursor: pointer;
 		}
+
+        .planet-line {
+            position: absolute;
+            bottom: 0;
+            width: 60%;
+            height: 3px;
+            background-color: #fff;
+            visibility: hidden;
+
+            &--active {
+                visibility: visible;
+            }
+        }
 	}
 
     img {
@@ -51,16 +65,18 @@ main {
     .planet-name {
         grid-column: 1/2;
         grid-row: 4/5;
-        font-size: 8rem;
+        font-size: 6rem;
         letter-spacing: 3px;
         font-family: 'Quattrocento';
         font-weight: 400;
+
     }
 
     .planet-desc {
         grid-row: 5/6;
         line-height: 25px;
         color: rgba(255,255,255,.7);
+        min-height: 125px;
     }
 
     .line {
@@ -109,6 +125,10 @@ main {
 
         img {
             width: 55%;
+        }
+
+        .planet-desc {
+            line-height: 30px;
         }
 
         .travel-info {
@@ -169,6 +189,7 @@ main {
         .planet-desc {
             grid-column: 4/5;
             grid-row: 5/6;
+            min-height: 150px;
         }
 
         .line {
