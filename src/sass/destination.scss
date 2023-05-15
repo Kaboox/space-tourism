@@ -52,7 +52,17 @@ main {
                 visibility: visible;
             }
         }
+
+        
 	}
+
+
+    // europa planet line width needs to be a bit bigger
+    .planet:nth-child(3) {
+        .planet-line {
+            width: 67%;
+        }
+    }
 
     img {
         grid-row: 2/3;

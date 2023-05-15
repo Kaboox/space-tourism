@@ -7,12 +7,25 @@ body {
 main {
 	display: grid;
 	grid-template-columns: 90%;
-	grid-template-rows: 65% 15% 10% 20% 40%;
+	grid-template-rows: 10% 65% 15% 10% 20% 40%;
 	margin-top: 1em;
+    max-width: 1900px;
 	text-align: center;
 
-	img {
+    h2 {
         grid-row: 1/2;
+        font-weight: 300;
+        text-transform: uppercase;
+        .page-number {
+            color: rgba(100, 100, 100, 0.9);
+            font-weight: 700;
+            margin-right: .5em;
+        }
+    }
+
+
+	img {
+        grid-row: 2/3;
 		width: 65%;
 		margin: 0 auto;
 	}
@@ -21,7 +34,7 @@ main {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-        grid-row: 2/3;
+        grid-row: 3/4;
 		width: 70%;
 		margin: 0 auto;
 
@@ -40,14 +53,14 @@ main {
 	}
 
 	.job-title {
-        grid-row: 3/4;
+        grid-row: 4/5;
 		color: rgba(255, 255, 255, 0.7);
 		text-transform: uppercase;
 		letter-spacing: 2px;
 	}
 
 	.full-name {
-        grid-row: 4/5;
+        grid-row: 5/6;
 		text-transform: uppercase;
 		letter-spacing: 3px;
 		font-size: 2.3rem;
@@ -55,7 +68,7 @@ main {
 	}
 
 	.person-desc {
-        grid-row: 5/6;
+        grid-row: 6/7;
 		line-height: 25px;
 		color: rgba(255, 255, 255, 0.7);
         padding-bottom: 1em;
@@ -64,7 +77,7 @@ main {
 
 @media (min-width: 576px) {
 	main {
-        grid-template-rows: 70% 25% 10% 15% 20%;
+        grid-template-rows: 10% 70% 25% 10% 15% 20%;
 		img {
 			width: 50%;
 		}
@@ -81,40 +94,44 @@ main {
     }
     main {
         margin-top: 3em;
-        grid-template-rows: 10% 25% 20% 20% 65%;
+        grid-template-rows: 25% 10% 25% 20% 20% 65%;
+
+        h2 {
+            text-align: left;
+        }
 
         img {
-            grid-row: 5/6;
+            grid-row: 6/7;
             width: 52%;
         }
 
         .job-title {
-            grid-row: 1/2;
+            grid-row: 2/3;
             font-size: 2.5rem;
             letter-spacing: 3px;
         }
 
         .full-name {
-            grid-row: 2/3;
+            grid-row: 3/4;
             font-size: 5rem;
             letter-spacing: 4px;
         }
 
         .person-desc {
-            grid-row: 3/4;
+            grid-row: 4/5;
             font-size: 2.5rem;
             line-height: 30px;
         }
 
         .people {
-            grid-row: 4/5;
+            grid-row: 5/6;
         }
     }
 }
 
 @media (min-width: 992px) {
     main {
-        grid-template-rows: 10% 20% 20% 20% 65%;
+        grid-template-rows: 20% 10% 20% 20% 20% 65%;
         img {
             width: 45%;
         }
@@ -127,6 +144,60 @@ main {
 
 @media (min-width: 1200px) {
     main {
-        grid-template-rows: 10% 20% 20% 20% 65%;
+        grid-template-columns: 45% 40%;
+        grid-template-rows: 10% 15% 15% 20% 35% 15%;
+        text-align: left;
+
+        h2 {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        .job-title {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+
+        .full-name {
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+
+        .people {
+            grid-column: 1/2;
+            grid-row: 6/7;
+            margin-left: 0;
+        }
+
+        .person-desc {
+            grid-column: 1/2;
+            grid-row: 5/6;
+            font-size: 2rem;
+        }
+
+        img {
+            grid-column: 2/3;
+            grid-row: 2/7;
+            width: 90%;
+        }
     }
+}
+
+@media (min-width: 1400px) {
+
+    main {
+        grid-template-columns: 35% 35%;
+        grid-template-rows: 10% 15% 15% 15% 35% 15%;
+        margin: 0 auto;
+        margin-top: 1em;
+        
+        img {
+            grid-row: 3/7;
+        }
+
+        .person-desc {
+            line-height: 35px;
+        }
+    }
+    
 }
