@@ -43,6 +43,11 @@ main {
         .person {
             padding: 1em;
             cursor: pointer;
+            transition: transform .3s;
+        }
+
+        .person:hover {
+            transform: scale(1.2);
         }
 
 		.circle {
