@@ -27,6 +27,8 @@ main {
 	img {
         grid-row: 2/3;
 		width: 65%;
+        max-height: 290px;
+        min-height: 290px;
 		margin: 0 auto;
 	}
 
@@ -38,13 +40,18 @@ main {
 		width: 70%;
 		margin: 0 auto;
 
-		.person {
+        .person {
+            padding: 1em;
+            cursor: pointer;
+        }
+
+		.circle {
 			height: 10px;
 			width: 10px;
 			padding: 0.5em;
 			border-radius: 50%;
 			background-color: rgba(120, 120, 120, 0.6);
-			cursor: pointer;
+            pointer-events: none;
 
 			&--active {
 				background-color: #fff;
@@ -72,6 +79,7 @@ main {
 		line-height: 25px;
 		color: rgba(255, 255, 255, 0.7);
         padding-bottom: 1em;
+        min-height: 165px;
 	}
 }
 
@@ -80,10 +88,16 @@ main {
         grid-template-rows: 10% 70% 25% 10% 15% 20%;
 		img {
 			width: 50%;
+            min-height: 350px;
+            max-height: 350px;
 		}
 
         .full-name {
             font-size: 3.5rem;
+        }
+        
+        .person-desc {
+            min-height: 0;
         }
 	}
 }
@@ -102,7 +116,8 @@ main {
 
         img {
             grid-row: 6/7;
-            width: 52%;
+            width: 55%;
+            min-height: 500px;
         }
 
         .job-title {
@@ -121,6 +136,7 @@ main {
             grid-row: 4/5;
             font-size: 2.5rem;
             line-height: 30px;
+            min-height: 175px;
         }
 
         .people {
@@ -130,6 +146,10 @@ main {
 }
 
 @media (min-width: 992px) {
+
+    body {
+        background-image: url('../../dist/img/crew/background-crew-desktop.jpg');
+    }
     main {
         grid-template-rows: 20% 10% 20% 20% 20% 65%;
         img {
@@ -178,7 +198,8 @@ main {
         img {
             grid-column: 2/3;
             grid-row: 2/7;
-            width: 90%;
+            width: 75%;
+            min-height: 550px;
         }
     }
 }
@@ -186,17 +207,19 @@ main {
 @media (min-width: 1400px) {
 
     main {
-        grid-template-columns: 35% 35%;
+        grid-template-columns: 40% 35%;
         grid-template-rows: 10% 15% 15% 15% 35% 15%;
         margin: 0 auto;
         margin-top: 1em;
         
         img {
             grid-row: 3/7;
+            // max-height: 600px;
         }
 
         .person-desc {
             line-height: 35px;
+            min-height: 180px;
         }
     }
     

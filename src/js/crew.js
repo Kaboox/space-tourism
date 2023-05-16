@@ -1,9 +1,11 @@
 const crewImg = document.querySelector('.crew-img')
-const jobTitle = document.querySelector('.job-title')
-const fullName = document.querySelector('.full-name')
-const personDesc = document.querySelector('.person-desc')
+const job = document.querySelector('.job-title')
+const Name = document.querySelector('.full-name')
+const Desc = document.querySelector('.person-desc')
 
 const dots = document.querySelectorAll('.person')
+const circles = document.querySelectorAll('.circle')
+
 
 const firstPerson = {
     imgPath: '../../dist/img/crew/image-douglas-hurley.webp',
@@ -41,9 +43,36 @@ const fourthPerson = {
 }
 
 
+const changeElements = person => {
+    crewImg.setAttribute('src', person.imgPath);
+    job.textContent = person.jobTitle;
+    Name.textContent = person.fullName;
+    Desc.textContent = person.personDesc;
+}
+
+
 dots.forEach(function(item) {
     item.addEventListener('click', e => {
-        console.log(e.target);
+        let circle = item.querySelector('.circle')
+
+
+        // clears all active states
+        circles.forEach(function(item) {
+            item.classList.remove('circle--active')
+        })
+        
+        // adds active state to the clicked dot
+        circle.classList.add('circle--active')
+
+        if (e.target.classList.contains('person-first')) {
+            changeElements(firstPerson)
+        } else if (e.target.classList.contains('person-second')) {
+            changeElements(secondPerson)
+        } else if (e.target.classList.contains('person-third')) {
+            changeElements(thirdPerson)
+        } else if (e.target.classList.contains('person-fourth')) {
+            changeElements(fourthPerson)
+        }
     })
 })
 
