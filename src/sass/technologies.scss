@@ -1,0 +1,184 @@
+@use 'style.scss';
+
+body {
+    background-image: url('../../dist/img/technology/background-technology-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 45% 20% 10% 15% 40%;
+    margin-top: 1em;
+    text-align: center;
+
+    h2 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        .page-number {
+            color: rgba(100, 100, 100, 0.9);
+            font-weight: 700;
+            margin-right: .5em;
+        }
+    }
+
+    img {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .steps {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .step {
+            padding: 1em;
+            .step-circle {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                border: 1px solid rgba(255, 255, 255, 0.7);
+                color: rgba(255, 255, 255, 0.7);
+                border-radius: 50%;
+                cursor: pointer;
+                
+            }
+
+            .step-circle--active {
+                background-color: #fff;
+                color: #333;
+            }
+        }
+
+
+    }
+
+    .terminology {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .step-title {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        font-size: 3rem;
+        font-family: 'Quattrocento';
+        letter-spacing: 2px;
+    }
+
+    .step-desc {
+        grid-column: 1/2;
+        grid-row: 6/7;
+        padding: 0.5em 1em;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 25px;
+    }
+}
+
+@media (min-width: 576px) {
+    main {
+        grid-template-rows: 20% 45% 25% 10% 15% 30%;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-rows: 20% 60% 25% 10% 15% 25%;
+        margin-top: 2em;
+        font-size: 2.3rem;
+
+        h2 {
+            text-align: left;
+            margin-left: 1em;
+        }
+
+        .steps .step {
+            padding: 1.5em;
+            .step-circle {
+                width: 75px;
+                height: 75px;
+            }
+        }
+
+        .step-title {
+            font-size: 6rem;
+            letter-spacing: 4px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (min-height: 1300px) {
+    main {
+        font-size: 3rem;
+
+        .steps .step .step-circle {
+            height: 100px;
+            width: 100px;
+        }
+
+        .step-title {
+            font-size: 8rem;
+        }
+    }
+}
+
+@media (min-width: 997px) {
+
+    main {
+        grid-template-rows: 20% 40% 25% 10% 15% 25%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    main {
+        grid-template-columns: 10% 40% 40%;
+        grid-template-rows: 20% 10% 20% 20% 40% 15%;
+        text-align: left;
+
+        h2 {
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+
+        img {
+            grid-column: 3/4;
+            grid-row: 3/7;
+        }
+
+        .steps {
+            grid-column: 1/2;
+            grid-row: 3/6;
+            flex-direction: column;
+        }
+
+        .terminology {
+            grid-column: 2/3; 
+            grid-row: 3/4;
+        }
+
+        .step-title {
+            grid-column: 2/3;
+            grid-row: 4/5;
+        }
+
+        .step-desc {
+            grid-column: 2/3;
+            grid-row: 5/6;
+            padding: 0;
+        }
+    }
+}
