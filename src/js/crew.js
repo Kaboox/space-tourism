@@ -8,7 +8,7 @@ const circles = document.querySelectorAll('.circle')
 
 
 const firstPerson = {
-    imgPath: '../../dist/img/crew/image-douglas-hurley.png',
+    imgPath: '../../dist/img/crew/',
     jobTitle: 'Commander',
     fullName: 'Douglas Hurley',
     personDesc: `Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
