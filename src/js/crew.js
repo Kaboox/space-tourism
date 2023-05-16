@@ -8,7 +8,7 @@ const circles = document.querySelectorAll('.circle')
 
 
 const firstPerson = {
-    imgPath: '../../dist/img/crew/',
+    imgPath: '../../dist/img/crew/imageDouglasHurley.webp',
     jobTitle: 'Commander',
     fullName: 'Douglas Hurley',
     personDesc: `Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
@@ -34,7 +34,7 @@ const thirdPerson = {
 }
 
 const fourthPerson = {
-    imgPath: '../../dist/img/crew/image-anousheh-ansari.png',
+    imgPath: '../../dist/img/crew/imageAnoushehAnsari.png',
     jobTitle: 'Flight Engineer',
     fullName: 'Anousheh Ansari',
     personDesc: `Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
