@@ -72,11 +72,28 @@ nav {
 				justify-content: space-between;
 				align-items: center;
 
-				li {
+				.mobile-link {
+					position: relative;
 					padding: 2em;
 					font-size: 2rem;
 					text-transform: uppercase;
 					cursor: pointer;
+
+					.mobile-line {
+						position: absolute;
+						height: 2px;
+						width: 80%;
+						top: 90%;
+						left:10%;
+						background-color: #fff;
+						visibility: hidden;
+
+						&--active {
+							visibility: visible;
+						}
+					}
+
+				
 				}
 			}
 		}
@@ -99,6 +116,7 @@ nav {
 				display: flex;
 
 				.desktop-link {
+					position: relative;
 					text-transform: uppercase;
 					font-weight: 300;
 					letter-spacing: 2px;
@@ -115,7 +133,23 @@ nav {
 					a:hover {
 						background-color: rgba(122, 122, 122, 0.2);
 					}
+
+					.link-line {
+						position: absolute;
+						top: 100%;
+						left: 50%;
+						transform: translateX(-50%);
+						height: 2px;
+						width: 70%;
+						background-color: #fff;
+						visibility: hidden;
+
+						&--active {
+							visibility: visible;
+						}
+					}
 				}
+				
 			}
 		}
 	}
@@ -126,7 +160,7 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 2em;
+	margin: 2em auto 0 auto;
 	max-width: 1900px;
 	font-size: 1.5rem;
 
@@ -175,6 +209,12 @@ main {
 	.explore:hover {
 		background-color: rgba(0, 0, 0, 0.95);
 		color: #fff;
+	}
+}
+
+@media (min-width: 576px) {
+	nav .mobile-nav .mobile-menu ul .mobile-link{
+		padding: 1.5em 2em;
 	}
 }
 

@@ -15,6 +15,7 @@ burgerBtn.addEventListener('click', () => {
 
     if (mobileMenu.classList.contains('mobile-menu--active')) {
         body.style.overflow = 'hidden'
+        mobileMenu.style.overflow = 'auto'
     } else {
         body.style.overflow = 'auto'
     }
