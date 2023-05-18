@@ -7,6 +7,7 @@ const travelTime = document.querySelector('.time-amount');
 
 const moon = {
     imgPath : 'dist/img/destination/image-moon.webp',
+    imgAlt: 'picture of moon',
     name : 'Moon',
     desc : `See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
     regain perspective and come back refreshed. While you’re there, take in some history 
@@ -17,6 +18,7 @@ const moon = {
 
 const mars = {
     imgPath : 'dist/img/destination/image-mars.webp',
+    imgAlt: 'picture of mars',
     name : 'Mars',
     desc : `Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It's two and a half times the size of Everest!`,
     distance : `225 mil. km`,
@@ -25,6 +27,7 @@ const mars = {
 
 const europa = {
     imgPath : 'dist/img/destination/image-europa.webp',
+    imgAlt: 'picture of europa moon',
     name : 'Europa',
     desc : `The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
     winter lover’s dream. With an icy surface, it’s perfect for a bit of 
@@ -36,6 +39,7 @@ const europa = {
 
 const titan = {
     imgPath : 'dist/img/destination/image-titan.webp',
+    imgAlt: 'picture of titan',
     name : 'Titan',
     desc : `The only moon known to have a dense atmosphere other than Earth, Titan 
     is a home away from home (just a few hundred degrees colder!). As a 
@@ -46,6 +50,7 @@ const titan = {
 
 const changeElements = (planet) => {
     planetImg.setAttribute('src', planet.imgPath)
+    planetImg.setAttribute('alt', planet.imgAlt)
     planetName.textContent = planet.name;
     planetDesc.textContent = planet.desc;
     travelDist.textContent = planet.distance;

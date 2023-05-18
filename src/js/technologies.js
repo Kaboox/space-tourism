@@ -8,6 +8,7 @@ const circles = document.querySelectorAll(".step-circle");
 
 const firstStep = {
 	ImgPath: "dist/img/technology/image-launch-vehicle-portrait.jpg",
+	altImg: "Rocket launching",
 	mobileImgPath: "dist/img/technology/image-launch-vehicle-landscape.jpg",
 	stepTitle: "Launch vehicle",
 	stepDesc: `A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
@@ -18,6 +19,7 @@ const firstStep = {
 
 const secondStep = {
 	ImgPath: "dist/img/technology/image-space-capsule-portrait.jpg",
+	altImg: "open space capsule in the space",
 	mobileImgPath: "dist/img/technology/image-space-capsule-landscape.jpg",
 	stepTitle: "Space capsule",
 	stepDesc: `A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
@@ -28,6 +30,7 @@ const secondStep = {
 
 const thirdStep = {
 	ImgPath: "dist/img/technology/image-spaceport-portrait.jpg",
+	altImg: "spaceport with rocket in it",
 	mobileImgPath: "dist/img/technology/image-spaceport-landscape.jpg",
 	stepTitle: "Spaceport",
 	stepDesc: `A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
@@ -42,6 +45,7 @@ const changeValues = (step) => {
 	} else {
 		img.setAttribute("src", step.mobileImgPath);
 	}
+	img.setAttribute('alt', step.altImg)
 	title.textContent = step.stepTitle;
 	desc.textContent = step.stepDesc;
 };

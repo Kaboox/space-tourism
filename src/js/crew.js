@@ -9,6 +9,7 @@ const circles = document.querySelectorAll('.circle')
 
 const firstPerson = {
     imgPath: 'dist/img/crew/image-douglas-hurley.webp',
+    imgAlt: 'douglas hurley in nasa spacesuit cheering',
     jobTitle: 'Commander',
     fullName: 'Douglas Hurley',
     personDesc: `Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
@@ -17,6 +18,7 @@ const firstPerson = {
 }
 const secondPerson = {
     imgPath: 'dist/img/crew/image-victor-glover.webp',
+    imgAlt: 'victor glover smiling in the nasa spacesuit',
     jobTitle: 'Pilot',
     fullName: 'Victor Glover',
     personDesc: `Pilot on the first operational flight of the SpaceX Crew Dragon to the 
@@ -26,6 +28,7 @@ const secondPerson = {
 }
 const thirdPerson = {
     imgPath: 'dist/img/crew/image-mark-shuttleworth.webp',
+    imgAlt: 'mark shuttleworth holding a microphone and  giving a speech',
     jobTitle: 'Mission Specialist',
     fullName: 'Mark Shuttleworth',
     personDesc: `Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
@@ -35,6 +38,7 @@ const thirdPerson = {
 
 const fourthPerson = {
     imgPath: 'dist/img/crew/image-anousheh-ansari.webp',
+    imgAlt: 'anousheh ansari giving a speech',
     jobTitle: 'Flight Engineer',
     fullName: 'Anousheh Ansari',
     personDesc: `Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
@@ -45,6 +49,7 @@ const fourthPerson = {
 
 const changeElements = person => {
     crewImg.setAttribute('src', person.imgPath);
+    crewImg.setAttribute('alt', person.imgAlt)
     job.textContent = person.jobTitle;
     Name.textContent = person.fullName;
     Desc.textContent = person.personDesc;
