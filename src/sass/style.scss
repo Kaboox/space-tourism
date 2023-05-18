@@ -207,7 +207,7 @@ main {
 		text-transform: uppercase;
 		cursor: pointer;
 		transition: background-color 0.3s, color 0.3s;
-		animation: fromRight 1s forwards;
+		animation: fromBottom 1s forwards;
 	}
 
 	.explore:hover {
@@ -252,6 +252,7 @@ main {
 			margin-top: 5em;
 			width: 300px;
 			height: 300px;
+			animation: fromLeft 1s forwards;
 		}
 	}
 }

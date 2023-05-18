@@ -20,3 +20,4 @@ burgerBtn.addEventListener('click', () => {
         body.style.overflow = 'auto'
     }
 })
+
