@@ -41,8 +41,8 @@ const thirdStep = {
 
 const changeValues = (step) => {
 	if (window.screen.width > 1024) {
-		Img.setAttribute('src', step.htmlImgPath)
 		Img.style.content = `url(${step.imgPath})`;
+		Img.setAttribute('src', step.htmlImgPath)
 	} else {
 		Img.setAttribute("src", step.mobileImgPath);
 	}
