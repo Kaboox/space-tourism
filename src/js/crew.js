@@ -8,7 +8,7 @@ const circles = document.querySelectorAll('.circle')
 
 
 const firstPerson = {
-    imgPath: '../../dist/img/crew/image-douglas-hurley.webp',
+    imgPath: 'dist/img/crew/image-douglas-hurley.webp',
     jobTitle: 'Commander',
     fullName: 'Douglas Hurley',
     personDesc: `Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
@@ -16,7 +16,7 @@ const firstPerson = {
     commander of Crew Dragon Demo-2.`
 }
 const secondPerson = {
-    imgPath: '../../dist/img/crew/image-victor-glover.webp',
+    imgPath: 'dist/img/crew/image-victor-glover.webp',
     jobTitle: 'Pilot',
     fullName: 'Victor Glover',
     personDesc: `Pilot on the first operational flight of the SpaceX Crew Dragon to the 
@@ -25,7 +25,7 @@ const secondPerson = {
     station systems flight engineer. `
 }
 const thirdPerson = {
-    imgPath: '../../dist/img/crew/image-mark-shuttleworth.webp',
+    imgPath: 'dist/img/crew/image-mark-shuttleworth.webp',
     jobTitle: 'Mission Specialist',
     fullName: 'Mark Shuttleworth',
     personDesc: `Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
