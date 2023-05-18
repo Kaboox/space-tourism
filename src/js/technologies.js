@@ -8,7 +8,7 @@ const circles = document.querySelectorAll(".step-circle");
 console.log(steps);
 
 const firstStep = {
-	imgPath: "dist/img/technology/image-launch-vehicle-portrait.jpg",
+	imgPath: "../../dist/img/technology/image-launch-vehicle-portrait.jpg",
 	mobileImgPath: "dist/img/technology/image-launch-vehicle-landscape.jpg",
 	stepTitle: "Launch vehicle",
 	stepDesc: `A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
@@ -18,7 +18,7 @@ const firstStep = {
 };
 
 const secondStep = {
-	imgPath: "dist/img/technology/image-space-capsule-portrait.jpg",
+	imgPath: "../../dist/img/technology/image-space-capsule-portrait.jpg",
 	mobileImgPath: "dist/img/technology/image-space-capsule-landscape.jpg",
 	stepTitle: "Space capsule",
 	stepDesc: `A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
@@ -28,7 +28,7 @@ const secondStep = {
 };
 
 const thirdStep = {
-	imgPath: "dist/img/technology/image-spaceport-portrait.jpg",
+	imgPath: "../../dist/img/technology/image-spaceport-portrait.jpg",
 	mobileImgPath: "dist/img/technology/image-spaceport-landscape.jpg",
 	stepTitle: "Spaceport",
 	stepDesc: `A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 

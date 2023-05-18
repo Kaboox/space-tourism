@@ -34,7 +34,7 @@ const thirdPerson = {
 }
 
 const fourthPerson = {
-    imgPath: '../../dist/img/crew/image-anousheh-ansari.webp',
+    imgPath: 'dist/img/crew/image-anousheh-ansari.webp',
     jobTitle: 'Flight Engineer',
     fullName: 'Anousheh Ansari',
     personDesc: `Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
