@@ -203,16 +203,28 @@ main {
 		border-radius: 50%;
 		font-size: 2.5rem;
 		font-family: serif;
-		letter-spacing: 2px;
 		text-transform: uppercase;
 		cursor: pointer;
 		transition: background-color 0.3s, color 0.3s;
 		animation: fromBottom 1s forwards;
+		
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			color: #333;
+			text-align: center;
+			letter-spacing: 3px;
+		}
 	}
 
 	.explore:hover {
 		background-color: rgba(0, 0, 0, 0.95);
-		color: #fff;
+		a {
+			color: #fff;
+		}
 	}
 }
 
