@@ -8,7 +8,7 @@ const circles = document.querySelectorAll(".step-circle");
 
 const firstStep = {
 	imgPath: "../../dist/img/technology/image-launch-vehicle-portrait.jpg",
-	htmlImgPath: "../../dist/img/technology/image-launch-vehicle-portrait.jpg",
+	htmlImgPath: "dist/img/technology/image-launch-vehicle-portrait.jpg",
 	mobileImgPath: "dist/img/technology/image-launch-vehicle-landscape.jpg",
 	stepTitle: "Launch vehicle",
 	stepDesc: `A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
