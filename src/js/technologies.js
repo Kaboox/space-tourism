@@ -41,7 +41,7 @@ const thirdStep = {
 
 const changeValues = (step) => {
 	if (window.screen.width > 1024) {
-		Img.style.content = `url(${step.imgPath})`;
+		//Img.style.content = `url(${step.imgPath})`;
 		Img.setAttribute('src', step.htmlImgPath)
 	} else {
 		Img.setAttribute("src", step.mobileImgPath);
@@ -68,3 +68,10 @@ steps.forEach(function (item) {
 		}
 	});
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+	if (window.innerWidth > 1200) {
+		Img.setAttribute('src', firstStep.htmlImgPath)
+	}
+})
